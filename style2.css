@@ -1,0 +1,294 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #004b8d;
+  color: white;
+  padding: 20px 0;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #007acc, #0097d3);
+  color: white;
+}
+
+#hero .btn {
+  display: inline-block;
+  margin: 10px 8px;
+  padding: 12px 20px;
+  background-color: white;
+  color: #007acc;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+#hero .btn:hover {
+  background-color: #f0f0f0;
+}
+
+#hero .btn.green {
+  background-color: #28a745;
+  color: white;
+}
+
+#hero .btn.green:hover {
+  background-color: #218838;
+}
+
+/* Sections */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #004b8d;
+}
+
+.section p {
+  /* About Me paragraph single line styling */
+  white-space: nowrap;       /* Text ko wrap nahi karne dega */
+  overflow: hidden;          /* Overflow ko chhupa dega */
+  text-overflow: ellipsis;   /* Agar text lamba hua to ... dikhega */
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 10px auto;
+  color: #222;
+
+}
+
+/* Profile Image */
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 15px auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f0f8ff;
+  border: 1px solid #004b8d;
+  border-radius: 6px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%; /* Starts off-screen */
+  font-size: 24px;
+  color: #004b8d;
+  font-weight: 500;
+  animation: scroll-left 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(-110%,0,0);
+  }
+}
+
+
+
+
+/* Skills */
+#skills {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  color: #0077b6;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 116, 217, 0.3);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills-list li {
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0, 116, 217, 0.3);
+  cursor: default;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.skills-list li:hover {
+  background: linear-gradient(135deg, #0096c7, #023e8a);
+  transform: scale(1.1);
+}
+.project {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #007acc;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+.project{
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00bcd4, #4caf50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+.project-video {
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-height: 300px;
+  object-fit: cover;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 30px auto;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+
+.contact-form button {
+  background-color: #00b4d8;
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0096c7;
+}
+
+/* Sabse important part: */
+.contact-info {
+  margin: 0 auto;           /* Center horizontally */
+  max-width: 500px;         /* Same width as form */
+  font-size: 16px;
+  color: #333;
+  text-align: left;         /* Left-align text */
+  margin-top: 20px;         /* Thoda gap upar se */
+}
+
+.contact-info a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+
+/* ✅ WhatsApp Floating Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  font-size: 15px;
+}
